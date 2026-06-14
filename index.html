@@ -401,6 +401,7 @@
       border-radius: 999px;
       font-size: 13px;
       backdrop-filter: blur(8px);
+      z-index: 4;
     }
 
     .cake-card:hover {
@@ -481,6 +482,7 @@
       opacity: 0;
       transition: 0.35s;
       backdrop-filter: blur(8px);
+      z-index: 4;
     }
 
     .photo-frame:hover img {
@@ -500,6 +502,50 @@
 
     .large img {
       height: 540px;
+    }
+
+    img.not-loaded {
+      opacity: 0 !important;
+    }
+
+    .not-loaded-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--deep-rose);
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 18px;
+      border-radius: inherit;
+      border: 2px dashed rgba(183, 110, 121, 0.45);
+      background:
+        linear-gradient(rgba(255, 248, 241, 0.9), rgba(253, 236, 239, 0.9)),
+        repeating-linear-gradient(
+          45deg,
+          rgba(183, 110, 121, 0.08) 0,
+          rgba(183, 110, 121, 0.08) 12px,
+          rgba(255, 255, 255, 0.25) 12px,
+          rgba(255, 255, 255, 0.25) 24px
+        );
+      box-shadow: inset 0 0 35px rgba(183, 110, 121, 0.12);
+    }
+
+    .cake-card .not-loaded-overlay {
+      height: 310px;
+      bottom: auto;
+      border-radius: 30px 30px 0 0;
+    }
+
+    .about-image .not-loaded-overlay {
+      border-radius: 35px;
+    }
+
+    .photo-frame .not-loaded-overlay {
+      border-radius: 25px;
     }
 
     .reviews {
@@ -860,7 +906,35 @@
       element.style.transitionDelay = `${Math.min(index * 60, 240)}ms`;
       revealObserver.observe(element);
     });
+
+    const allImages = document.querySelectorAll("img");
+
+    function showNotLoaded(image) {
+      if (image.dataset.fallbackAdded === "true") return;
+
+      image.dataset.fallbackAdded = "true";
+      image.classList.add("not-loaded");
+
+      const parent = image.parentElement;
+      parent.style.position = "relative";
+
+      const overlay = document.createElement("div");
+      overlay.className = "not-loaded-overlay";
+      overlay.textContent = "[NOT LOADED]";
+
+      parent.appendChild(overlay);
+    }
+
+    allImages.forEach((image) => {
+      image.addEventListener("error", () => {
+        showNotLoaded(image);
+      });
+
+      if (image.complete && image.naturalWidth === 0) {
+        showNotLoaded(image);
+      }
+    });
   </script>
 
 </body>
-</html>
+</html> 
