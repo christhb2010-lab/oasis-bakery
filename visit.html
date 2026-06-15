@@ -105,27 +105,6 @@
       }
     }
 
-    .home-link {
-      position: absolute;
-      top: 28px;
-      left: 28px;
-      z-index: 5;
-      display: inline-block;
-      padding: 12px 22px;
-      background: linear-gradient(135deg, var(--rose), #d08a96);
-      color: white;
-      text-decoration: none;
-      border-radius: 999px;
-      font-size: 16px;
-      box-shadow: 0 12px 24px rgba(183, 110, 121, 0.22);
-      transition: 0.3s ease;
-    }
-
-    .home-link:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 32px rgba(183, 110, 121, 0.32);
-    }
-
     .theme-toggle {
       position: absolute;
       top: 28px;
@@ -406,11 +385,11 @@
     }
 
     .back-btn {
-      background: linear-gradient(135deg, var(--brown), #6b403d);
+      background: linear-gradient(135deg, #d19faa, #e4b6c0);
     }
 
     body.dark-mode .back-btn {
-      background: linear-gradient(135deg, #0f0b0d, #33212a);
+      background: linear-gradient(135deg, #d19faa, #e4b6c0);
     }
 
     .mini-note {
@@ -422,13 +401,6 @@
     @media (max-width: 750px) {
       .visit-card {
         padding: 48px 25px 40px;
-      }
-
-      .home-link {
-        top: 18px;
-        left: 18px;
-        padding: 10px 16px;
-        font-size: 14px;
       }
 
       .theme-toggle {
@@ -469,8 +441,6 @@
 </head>
 
 <body>
-
-  <a href="index.html" class="home-link">← Main Page</a>
 
   <div class="floating-decor">
     <span>🍰</span>
