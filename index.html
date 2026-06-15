@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -36,42 +35,17 @@
       padding: 0;
       box-sizing: border-box;
       font-family: Georgia, serif;
-      min-width: 0;
     }
 
     html {
       scroll-behavior: smooth;
-      width: 100%;
-      max-width: 100%;
     }
 
     body {
       background: var(--cream);
       color: var(--brown);
       overflow-x: hidden;
-      width: 100%;
-      max-width: 100%;
       transition: background 0.4s ease, color 0.4s ease;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    a,
-    span,
-    div,
-    .btn,
-    .eyebrow,
-    .price {
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      word-break: normal;
-    }
-
-    img {
-      max-width: 100%;
     }
 
     body::before {
@@ -156,12 +130,11 @@
     }
 
     .logo {
-      font-size: clamp(22px, 4vw, 30px);
+      font-size: 30px;
       font-weight: bold;
       color: var(--rose);
       letter-spacing: 1px;
       position: relative;
-      max-width: 100%;
     }
 
     .logo::after {
@@ -191,7 +164,6 @@
       gap: 14px;
       flex-wrap: wrap;
       justify-content: center;
-      max-width: 100%;
     }
 
     .nav-links a {
@@ -208,9 +180,6 @@
       border-radius: 999px;
       background: rgba(183, 110, 121, 0.08);
       display: inline-block;
-      text-align: center;
-      line-height: 1.25;
-      max-width: 100%;
     }
 
     .nav-links a::after {
@@ -249,7 +218,6 @@
       box-shadow: 0 10px 22px rgba(183, 110, 121, 0.22);
       overflow: hidden;
       transition: 0.35s ease;
-      flex: 0 0 auto;
     }
 
     .theme-toggle:hover {
@@ -355,12 +323,10 @@
       padding: 8%;
       position: relative;
       z-index: 2;
-      max-width: 100%;
     }
 
     .hero-content {
       max-width: 650px;
-      width: 100%;
       background: var(--white-glass);
       padding: 50px;
       border-radius: 35px;
@@ -369,7 +335,6 @@
       backdrop-filter: blur(10px);
       animation: fadeUp 1.1s ease forwards;
       transition: 0.4s ease;
-      overflow: hidden;
     }
 
     body.dark-mode .hero-content {
@@ -394,21 +359,19 @@
       color: var(--deep-rose);
       border-radius: 999px;
       margin-bottom: 18px;
-      font-size: clamp(13px, 3.2vw, 15px);
+      font-size: 15px;
       letter-spacing: 1px;
-      max-width: 100%;
-      line-height: 1.35;
     }
 
     .hero h1 {
-      font-size: clamp(36px, 9vw, 66px);
+      font-size: 66px;
       color: var(--deep-rose);
       margin-bottom: 20px;
       line-height: 1.05;
     }
 
     .hero p {
-      font-size: clamp(16px, 4vw, 20px);
+      font-size: 20px;
       margin-bottom: 30px;
       line-height: 1.7;
     }
@@ -420,14 +383,11 @@
       color: white;
       text-decoration: none;
       border-radius: 30px;
-      font-size: clamp(15px, 3.8vw, 17px);
+      font-size: 17px;
       transition: 0.3s;
       position: relative;
       overflow: hidden;
       box-shadow: 0 12px 24px rgba(183, 110, 121, 0.25);
-      text-align: center;
-      max-width: 100%;
-      line-height: 1.3;
     }
 
     .btn::before {
@@ -452,24 +412,20 @@
 
     section {
       padding: 95px 8%;
-      max-width: 100%;
-      overflow-x: hidden;
     }
 
     .section-title {
       text-align: center;
-      font-size: clamp(31px, 7vw, 44px);
+      font-size: 44px;
       color: var(--deep-rose);
       margin-bottom: 15px;
-      line-height: 1.15;
     }
 
     .section-subtitle {
       text-align: center;
-      font-size: clamp(16px, 4vw, 18px);
+      font-size: 18px;
       margin-bottom: 55px;
       color: var(--soft-brown);
-      line-height: 1.5;
     }
 
     .reveal {
@@ -485,14 +441,13 @@
 
     .about {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 55px;
       align-items: center;
     }
 
     .about-image {
       position: relative;
-      max-width: 100%;
     }
 
     .about-image::before {
@@ -516,27 +471,20 @@
       border-radius: 35px;
       box-shadow: var(--shadow);
       transition: 0.4s;
-      display: block;
     }
 
     .about img:hover {
       transform: rotate(1.5deg) scale(1.02);
     }
 
-    .about-text {
-      max-width: 100%;
-      overflow: hidden;
-    }
-
     .about-text h2 {
-      font-size: clamp(30px, 7vw, 40px);
+      font-size: 40px;
       color: var(--deep-rose);
       margin-bottom: 20px;
-      line-height: 1.15;
     }
 
     .about-text p {
-      font-size: clamp(16px, 4vw, 18px);
+      font-size: 18px;
       line-height: 1.8;
       margin-bottom: 20px;
     }
@@ -566,7 +514,6 @@
       box-shadow: 0 15px 35px rgba(183, 110, 121, 0.18);
       transition: 0.35s;
       position: relative;
-      max-width: 100%;
     }
 
     .cake-card::after {
@@ -581,9 +528,6 @@
       font-size: 13px;
       backdrop-filter: blur(8px);
       z-index: 4;
-      max-width: calc(100% - 36px);
-      text-align: center;
-      line-height: 1.2;
     }
 
     body.dark-mode .cake-card::after {
@@ -600,7 +544,6 @@
       height: 310px;
       object-fit: cover;
       transition: 0.45s;
-      display: block;
     }
 
     .cake-card:hover img {
@@ -610,25 +553,22 @@
     .cake-card-content {
       padding: 26px;
       text-align: center;
-      max-width: 100%;
-      overflow: hidden;
     }
 
     .cake-card h3 {
-      font-size: clamp(21px, 5vw, 24px);
+      font-size: 24px;
       color: var(--deep-rose);
       margin-bottom: 10px;
-      line-height: 1.2;
     }
 
     .cake-card p {
-      font-size: clamp(15px, 3.8vw, 16px);
+      font-size: 16px;
       margin-bottom: 15px;
       line-height: 1.5;
     }
 
     .price {
-      font-size: clamp(18px, 5vw, 21px);
+      font-size: 21px;
       font-weight: bold;
       color: var(--rose);
     }
@@ -639,7 +579,7 @@
 
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
@@ -648,7 +588,6 @@
       overflow: hidden;
       border-radius: 25px;
       box-shadow: 0 12px 30px rgba(183, 110, 121, 0.2);
-      max-width: 100%;
     }
 
     .photo-frame img {
@@ -674,8 +613,6 @@
       transition: 0.35s;
       backdrop-filter: blur(8px);
       z-index: 4;
-      max-width: calc(100% - 36px);
-      line-height: 1.2;
     }
 
     body.dark-mode .photo-frame::after {
@@ -716,7 +653,7 @@
       color: var(--deep-rose);
       font-weight: bold;
       letter-spacing: 2px;
-      font-size: clamp(14px, 4vw, 18px);
+      font-size: 18px;
       border-radius: inherit;
       border: 2px dashed rgba(183, 110, 121, 0.45);
       background:
@@ -729,8 +666,6 @@
           rgba(255, 255, 255, 0.25) 24px
         );
       box-shadow: inset 0 0 35px rgba(183, 110, 121, 0.12);
-      padding: 16px;
-      overflow-wrap: anywhere;
     }
 
     body.dark-mode .not-loaded-overlay {
@@ -776,8 +711,6 @@
       box-shadow: 0 15px 35px rgba(183, 110, 121, 0.16);
       transition: 0.35s;
       position: relative;
-      max-width: 100%;
-      overflow: hidden;
     }
 
     .review::before {
@@ -795,15 +728,14 @@
     }
 
     .review p {
-      font-size: clamp(15px, 4vw, 17px);
+      font-size: 17px;
       line-height: 1.7;
       margin-bottom: 20px;
     }
 
     .review h4 {
       color: var(--deep-rose);
-      font-size: clamp(18px, 4.5vw, 20px);
-      line-height: 1.2;
+      font-size: 20px;
     }
 
     .experience {
@@ -848,12 +780,14 @@
       color: var(--deep-rose);
       margin-bottom: 20px;
       line-height: 1.15;
+      overflow-wrap: break-word;
     }
 
     .experience-box p {
       font-size: clamp(16px, 4vw, 19px);
       line-height: 1.8;
       margin-bottom: 30px;
+      overflow-wrap: break-word;
     }
 
     footer {
@@ -862,7 +796,6 @@
       text-align: center;
       padding: 34px;
       font-size: 15px;
-      overflow-wrap: break-word;
     }
 
     body.dark-mode footer {
@@ -870,13 +803,8 @@
     }
 
     @media (max-width: 900px) {
-      nav {
-        align-items: flex-start;
-        gap: 18px;
-      }
-
       .hero h1 {
-        font-size: clamp(38px, 8vw, 46px);
+        font-size: 46px;
       }
 
       .about {
@@ -884,7 +812,7 @@
       }
 
       .photo-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .large {
@@ -900,129 +828,45 @@
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
-        align-items: center;
         gap: 15px;
-        padding: 16px 5%;
-      }
-
-      .logo {
-        text-align: center;
-        padding-right: 22px;
       }
 
       .nav-links {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 9px;
+        gap: 8px;
       }
 
       .nav-links a {
-        width: 100%;
-        font-size: 14px;
-        padding: 9px 8px;
-        white-space: normal;
+        font-size: 15px;
+        padding: 8px 11px;
       }
 
       .theme-toggle {
-        grid-column: 1 / -1;
-        justify-self: center;
         width: 58px;
         height: 32px;
-        margin-top: 2px;
       }
 
       body.dark-mode .toggle-circle {
         left: 31px;
       }
 
-      .hero {
-        padding: 42px 5% 60px;
-        align-items: flex-start;
-      }
-
       .hero-content {
-        padding: 28px 20px;
-        border-radius: 25px;
+        padding: 32px;
       }
 
       .hero h1 {
-        font-size: clamp(34px, 11vw, 38px);
-      }
-
-      .hero p {
-        line-height: 1.65;
-      }
-
-      .btn {
-        width: 100%;
-        padding: 14px 18px;
-      }
-
-      section {
-        padding: 70px 5%;
-      }
-
-      .section-subtitle {
-        margin-bottom: 38px;
-      }
-
-      .about {
-        gap: 36px;
-      }
-
-      .about-image::before {
-        inset: -10px;
-        border-radius: 30px;
-      }
-
-      .about img {
-        height: 330px;
-        border-radius: 25px;
-      }
-
-      .cake-grid {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 24px;
-      }
-
-      .cake-card {
-        border-radius: 24px;
-      }
-
-      .cake-card img {
-        height: 260px;
-      }
-
-      .cake-card-content {
-        padding: 22px 18px;
-      }
-
-      .cake-card .not-loaded-overlay {
-        height: 260px;
-        border-radius: 24px 24px 0 0;
+        font-size: 38px;
       }
 
       .photo-grid {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
       }
 
       .large {
         grid-column: span 1;
       }
 
-      .large img,
-      .photo-frame img {
+      .large img {
         height: 300px;
-      }
-
-      .review-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .review {
-        padding: 30px 22px;
-        border-radius: 24px;
       }
 
       .experience-box {
@@ -1035,29 +879,6 @@
       }
     }
 
-    @media (max-width: 380px) {
-      .nav-links {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-content,
-      .experience-box,
-      .review {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-
-      .eyebrow {
-        padding: 8px 12px;
-      }
-
-      .cake-card::after {
-        top: 12px;
-        right: 12px;
-        max-width: calc(100% - 24px);
-      }
-    }
-
     @media (prefers-reduced-motion: reduce) {
       * {
         animation: none !important;
@@ -1065,7 +886,6 @@
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -1074,41 +894,38 @@
     <nav>
       <div class="logo">Oasis Bakery</div>
 
-```
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#cakes">Cakes</a>
-    <a href="#photos">Photo Spots</a>
-    <a href="visit.html">Book a Visit</a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#cakes">Cakes</a>
+        <a href="#photos">Photo Spots</a>
+        <a href="visit.html">Book a Visit</a>
 
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode">
-      <span class="sun">☀️</span>
-      <span class="moon">🌙</span>
-      <span class="toggle-circle"></span>
-    </button>
-  </div>
-</nav>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode">
+          <span class="sun">☀️</span>
+          <span class="moon">🌙</span>
+          <span class="toggle-circle"></span>
+        </button>
+      </div>
+    </nav>
 
-<div class="floating-sweets">
-  <span>🍰</span>
-  <span>✨</span>
-  <span>🧁</span>
-  <span>🌸</span>
-</div>
+    <div class="floating-sweets">
+      <span>🍰</span>
+      <span>✨</span>
+      <span>🧁</span>
+      <span>🌸</span>
+    </div>
 
-<div class="hero">
-  <div class="hero-content">
-    <span class="eyebrow">Aesthetic Cakes • Cozy Corners • Sweet Memories</span>
-    <h1>Dreamy Cakes, Pretty Moments</h1>
-    <p>
-      Welcome to Oasis Bakery, an aesthetic cake shop filled with soft colors,
-      floral desserts, cozy corners, and picture-perfect treats.
-    </p>
-    <a href="#cakes" class="btn">Explore Our Cakes</a>
-  </div>
-</div>
-```
-
+    <div class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Aesthetic Cakes • Cozy Corners • Sweet Memories</span>
+        <h1>Dreamy Cakes, Pretty Moments</h1>
+        <p>
+          Welcome to Oasis Bakery, an aesthetic cake shop filled with soft colors,
+          floral desserts, cozy corners, and picture-perfect treats.
+        </p>
+        <a href="#cakes" class="btn">Explore Our Cakes</a>
+      </div>
+    </div>
   </header>
 
   <section class="about reveal">
@@ -1116,68 +933,62 @@
       <img src="images/shop-interior.jpg" alt="Aesthetic cake shop interior">
     </div>
 
-```
-<div class="about-text">
-  <h2>A Cake Shop Made for Memories</h2>
-  <p>
-    Oasis Bakery is designed for people who love beautiful desserts and beautiful photos.
-    Every corner of our shop is styled with pastel flowers, vintage mirrors, soft lighting,
-    and elegant cake displays.
-  </p>
-  <p>
-    Whether you are celebrating a birthday, a bridal shower, a date, or a simple sweet craving,
-    our shop gives you the perfect backdrop.
-  </p>
-  <a href="#photos" class="btn">See Photo Spots</a>
-</div>
-```
-
+    <div class="about-text">
+      <h2>A Cake Shop Made for Memories</h2>
+      <p>
+        Oasis Bakery is designed for people who love beautiful desserts and beautiful photos.
+        Every corner of our shop is styled with pastel flowers, vintage mirrors, soft lighting,
+        and elegant cake displays.
+      </p>
+      <p>
+        Whether you are celebrating a birthday, a bridal shower, a date, or a simple sweet craving,
+        our shop gives you the perfect backdrop.
+      </p>
+      <a href="#photos" class="btn">See Photo Spots</a>
+    </div>
   </section>
 
   <section class="cakes" id="cakes">
     <h2 class="section-title reveal">Our Signature Cakes</h2>
     <p class="section-subtitle reveal">Pretty, delicious, and made fresh every day.</p>
 
-```
-<div class="cake-grid">
-  <div class="cake-card reveal">
-    <img src="images/strawberry-cake.jpg" alt="Strawberry cake">
-    <div class="cake-card-content">
-      <h3>Strawberry Blush</h3>
-      <p>Vanilla sponge, strawberry cream, and fresh berries.</p>
-      <div class="price">$28</div>
-    </div>
-  </div>
+    <div class="cake-grid">
+      <div class="cake-card reveal">
+        <img src="images/strawberry-cake.jpg" alt="Strawberry cake">
+        <div class="cake-card-content">
+          <h3>Strawberry Blush</h3>
+          <p>Vanilla sponge, strawberry cream, and fresh berries.</p>
+          <div class="price">$28</div>
+        </div>
+      </div>
 
-  <div class="cake-card reveal">
-    <img src="images/floral-cake.jpg" alt="Floral cake">
-    <div class="cake-card-content">
-      <h3>Garden Romance</h3>
-      <p>Floral buttercream cake with soft pastel details.</p>
-      <div class="price">$35</div>
-    </div>
-  </div>
+      <div class="cake-card reveal">
+        <img src="images/floral-cake.jpg" alt="Floral cake">
+        <div class="cake-card-content">
+          <h3>Garden Romance</h3>
+          <p>Floral buttercream cake with soft pastel details.</p>
+          <div class="price">$35</div>
+        </div>
+      </div>
 
-  <div class="cake-card reveal">
-    <img src="images/chocolate-cake.jpg" alt="Chocolate cake">
-    <div class="cake-card-content">
-      <h3>Velvet Cocoa</h3>
-      <p>Rich chocolate layers with silky ganache.</p>
-      <div class="price">$32</div>
-    </div>
-  </div>
+      <div class="cake-card reveal">
+        <img src="images/chocolate-cake.jpg" alt="Chocolate cake">
+        <div class="cake-card-content">
+          <h3>Velvet Cocoa</h3>
+          <p>Rich chocolate layers with silky ganache.</p>
+          <div class="price">$32</div>
+        </div>
+      </div>
 
-  <div class="cake-card reveal">
-    <img src="images/pink-cake.jpg" alt="Pink cake">
-    <div class="cake-card-content">
-      <h3>Pink Cloud</h3>
-      <p>Light raspberry cream cake with pearl decorations.</p>
-      <div class="price">$30</div>
+      <div class="cake-card reveal">
+        <img src="images/pink-cake.jpg" alt="Pink cake">
+        <div class="cake-card-content">
+          <h3>Pink Cloud</h3>
+          <p>Light raspberry cream cake with pearl decorations.</p>
+          <div class="price">$30</div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-```
-
   </section>
 
   <section class="photo-spots" id="photos">
@@ -1186,79 +997,73 @@
       Replace these images with your own Oasis Bakery photos.
     </p>
 
-```
-<div class="photo-grid">
-  <div class="photo-frame large reveal">
-    <img src="images/photo-wall.jpg" alt="Flower photo wall">
-  </div>
+    <div class="photo-grid">
+      <div class="photo-frame large reveal">
+        <img src="images/photo-wall.jpg" alt="Flower photo wall">
+      </div>
 
-  <div class="photo-frame reveal">
-    <img src="images/cake-display.jpg" alt="Cake display">
-  </div>
+      <div class="photo-frame reveal">
+        <img src="images/cake-display.jpg" alt="Cake display">
+      </div>
 
-  <div class="photo-frame reveal">
-    <img src="images/window-seat.jpg" alt="Window seating area">
-  </div>
+      <div class="photo-frame reveal">
+        <img src="images/window-seat.jpg" alt="Window seating area">
+      </div>
 
-  <div class="photo-frame reveal">
-    <img src="images/mirror-corner.jpg" alt="Vintage mirror corner">
-  </div>
+      <div class="photo-frame reveal">
+        <img src="images/mirror-corner.jpg" alt="Vintage mirror corner">
+      </div>
 
-  <div class="photo-frame reveal">
-    <img src="images/pastel-table.jpg" alt="Pastel table setting">
-  </div>
+      <div class="photo-frame reveal">
+        <img src="images/pastel-table.jpg" alt="Pastel table setting">
+      </div>
 
-  <div class="photo-frame reveal">
-    <img src="images/cupcake-closeup.jpg" alt="Cupcake close-up">
-  </div>
+      <div class="photo-frame reveal">
+        <img src="images/cupcake-closeup.jpg" alt="Cupcake close-up">
+      </div>
 
-  <div class="photo-frame reveal">
-    <img src="images/rose-cake.jpg" alt="Rose cake">
-  </div>
+      <div class="photo-frame reveal">
+        <img src="images/rose-cake.jpg" alt="Rose cake">
+      </div>
 
-  <div class="photo-frame reveal">
-    <img src="images/shop-sign.jpg" alt="Cake shop sign">
-  </div>
+      <div class="photo-frame reveal">
+        <img src="images/shop-sign.jpg" alt="Cake shop sign">
+      </div>
 
-  <div class="photo-frame reveal">
-    <img src="images/coffee-cake.jpg" alt="Coffee and cake">
-  </div>
-</div>
-```
-
+      <div class="photo-frame reveal">
+        <img src="images/coffee-cake.jpg" alt="Coffee and cake">
+      </div>
+    </div>
   </section>
 
   <section class="reviews">
     <h2 class="section-title reveal">What Customers Say</h2>
     <p class="section-subtitle reveal">Sweet words from our lovely guests.</p>
 
-```
-<div class="review-grid">
-  <div class="review reveal">
-    <p>
-      “The cutest cake shop ever. Every corner was perfect for photos,
-      and the strawberry cake was amazing.”
-    </p>
-    <h4>— Mia</h4>
-  </div>
+    <div class="review-grid">
+      <div class="review reveal">
+        <p>
+          “The cutest cake shop ever. Every corner was perfect for photos,
+          and the strawberry cake was amazing.”
+        </p>
+        <h4>— Mia</h4>
+      </div>
 
-  <div class="review reveal">
-    <p>
-      “I booked a birthday table and it looked like a Pinterest board.
-      So soft, elegant, and delicious.”
-    </p>
-    <h4>— Layla</h4>
-  </div>
+      <div class="review reveal">
+        <p>
+          “I booked a birthday table and it looked like a Pinterest board.
+          So soft, elegant, and delicious.”
+        </p>
+        <h4>— Layla</h4>
+      </div>
 
-  <div class="review reveal">
-    <p>
-      “The floral cake was almost too pretty to eat. This place is magical.”
-    </p>
-    <h4>— Sofia</h4>
-  </div>
-</div>
-```
-
+      <div class="review reveal">
+        <p>
+          “The floral cake was almost too pretty to eat. This place is magical.”
+        </p>
+        <h4>— Sofia</h4>
+      </div>
+    </div>
   </section>
 
   <section class="experience">
