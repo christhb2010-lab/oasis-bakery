@@ -64,48 +64,6 @@
         linear-gradient(135deg, var(--cream), var(--pink));
     }
 
-    .floating-decor span {
-      position: fixed;
-      font-size: 34px;
-      opacity: 0.7;
-      animation: float 6s ease-in-out infinite;
-      pointer-events: none;
-      filter: drop-shadow(0 8px 14px rgba(183, 110, 121, 0.25));
-    }
-
-    .floating-decor span:nth-child(1) {
-      top: 12%;
-      left: 8%;
-      animation-delay: 0s;
-    }
-
-    .floating-decor span:nth-child(2) {
-      top: 18%;
-      right: 10%;
-      animation-delay: 1.2s;
-    }
-
-    .floating-decor span:nth-child(3) {
-      bottom: 15%;
-      left: 12%;
-      animation-delay: 2.2s;
-    }
-
-    .floating-decor span:nth-child(4) {
-      bottom: 10%;
-      right: 12%;
-      animation-delay: 3.1s;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-24px) rotate(8deg);
-      }
-    }
-
     .theme-toggle {
       position: absolute;
       top: 28px;
@@ -301,7 +259,9 @@
       justify-content: center;
       background: linear-gradient(135deg, var(--rose), #d08a96);
       color: white;
-      font-size: 28px;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 1px;
       box-shadow: 0 12px 24px rgba(183, 110, 121, 0.25);
     }
 
@@ -384,7 +344,7 @@
       }
 
       body.dark-mode .toggle-circle {
-        left: 29px;
+        left: 31px;
       }
 
       h1 {
@@ -397,10 +357,6 @@
 
       .info-box p {
         min-height: auto;
-      }
-
-      .floating-decor span {
-        font-size: 26px;
       }
     }
 
@@ -416,21 +372,16 @@
 
 <body>
 
-  <div class="floating-decor">
-    <span>🍰</span>
-    <span>🌸</span>
-    <span>✨</span>
-    <span>🧁</span>
-  </div>
-
   <div class="visit-card">
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode">
       <span class="toggle-circle"></span>
     </button>
 
-
+```
 <div class="content">
-  <a href="index.html" class="logo">Oasis Bakery</a>
+```
+
+<a href="index.html" class="logo">Oasis Bakery</a>
 
   <h1>Book a Visit</h1>
   <p class="subtitle">
@@ -439,7 +390,7 @@
 
   <div class="info-grid">
     <div class="info-box">
-      <div class="icon">📍</div>
+      <div class="icon">LOC</div>
       <h2>Our Location</h2>
       <p>Find Oasis Bakery and plan your visit using our location link.</p>
       <a href="https://share.google/FDOaytuTMlZZFrLJ1" target="_blank" class="btn">
@@ -447,21 +398,23 @@
       </a>
     </div>
 
-    <div class="info-box">
-      <div class="icon">☎️</div>
-      <h2>Call Us</h2>
-      <p>+971 6 740 6800</p>
-      <a href="tel:+97167406800" class="btn">
-        Call Now
-      </a>
-    </div>
+```
+<div class="info-box">
+  <div class="icon">TEL</div>
+  <h2>Call Us</h2>
+  <p>+971 6 740 6800</p>
+  <a href="tel:+97167406800" class="btn">
+    Call Now
+  </a>
+</div>
+```
+
   </div>
 
-  <a href="index.html" class="btn back-btn">← Back to Main Page</a>
+<a href="index.html" class="btn back-btn">← Back to Main Page</a>
 
   <p class="mini-note">Fresh cakes, warm lights, and sweet memories are waiting.</p>
 </div>
-
 
   </div>
 
@@ -482,4 +435,4 @@
   </script>
 
 </body>
-</html> 
+</html>
