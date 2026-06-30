@@ -82,9 +82,6 @@
       overflow: hidden;
       transition: 0.35s ease;
       z-index: 5;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .theme-toggle:hover {
@@ -107,7 +104,22 @@
 
     .sun,
     .moon {
-      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 15px;
+      z-index: 2;
+      transition: 0.35s ease;
+    }
+
+    .sun {
+      left: 9px;
+      opacity: 1;
+    }
+
+    .moon {
+      right: 9px;
+      opacity: 0.5;
     }
 
     body.dark-mode .theme-toggle {
@@ -117,6 +129,14 @@
     body.dark-mode .toggle-circle {
       left: 35px;
       background: #ffd8e0;
+    }
+
+    body.dark-mode .sun {
+      opacity: 0.45;
+    }
+
+    body.dark-mode .moon {
+      opacity: 1;
     }
 
     .visit-card {
@@ -332,7 +352,7 @@
       }
 
       body.dark-mode .toggle-circle {
-        left: 29px;
+        left: 31px;
       }
 
       h1 {
@@ -360,6 +380,8 @@
 <body>
 <div class="visit-card">
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode">
+      <span class="sun"></span>
+      <span class="moon"></span>
       <span class="toggle-circle"></span>
     </button>
 
