@@ -272,9 +272,9 @@ to {
     .hero {
       flex: 1;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      padding: 8%;
+      padding: 54px 8% 8%;
       position: relative;
       z-index: 2;
       text-align: center;
@@ -780,49 +780,24 @@ to {
       }
 
       .theme-toggle {
-        width: 58px;
-        height: 32px;
-      }
-
-      body.dark-mode .toggle-circle {
-        left: 31px;
-      }
-
-      .hero-content {
-        padding: 0;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .photo-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .large {
-        grid-column: span 1;
-      }
-
-      .large img {
-        height: 300px;
-      }
-
-      .photo-frame:nth-child(n + 5) {
-        display: none;
-      }
-
-      .experience-box {
-        padding: 0;
-      }
-}
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation: none !important;
-        transition: none !important;
-      }
+      width: 64px;
+      height: 34px;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      position: relative;
+      padding: 4px;
+      background: linear-gradient(135deg, #ffd6de, #fff1c7);
+      box-shadow: 0 10px 22px rgba(183, 110, 121, 0.22);
+      overflow: hidden;
+      transition: 0.35s ease;
+      flex: 0 0 auto;
+      align-self: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 4px;
+      vertical-align: middle;
     }
   </style>
 </head>

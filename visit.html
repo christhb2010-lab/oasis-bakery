@@ -62,45 +62,7 @@
         radial-gradient(circle at 50% 100%, rgba(232, 163, 175, 0.12), transparent 35%),
         linear-gradient(135deg, var(--cream), var(--pink));
     }
-
-    .floating-decor span {
-      position: fixed;
-      font-size: 34px;
-      opacity: 0.7;
-      animation: float 6s ease-in-out infinite;
-      pointer-events: none;
-      filter: drop-shadow(0 8px 14px rgba(183, 110, 121, 0.25));
-    }
-
-    .floating-decor span:nth-child(1) {
-      top: 12%;
-      left: 8%;
-      animation-delay: 0s;
-    }
-
-    .floating-decor span:nth-child(2) {
-      top: 18%;
-      right: 10%;
-      animation-delay: 1.2s;
-    }
-
-    .floating-decor span:nth-child(3) {
-      bottom: 15%;
-      left: 12%;
-      animation-delay: 2.2s;
-    }
-
-    .floating-decor span:nth-child(4) {
-      bottom: 10%;
-      right: 12%;
-      animation-delay: 3.1s;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
-      }
-      50% {
+50% {
         transform: translateY(-24px) rotate(8deg);
       }
     }
@@ -120,6 +82,9 @@
       overflow: hidden;
       transition: 0.35s ease;
       z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .theme-toggle:hover {
@@ -134,20 +99,15 @@
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      background: #ffffff;
-      box-shadow: 0 4px 10px rgba(74, 44, 42, 0.22);
+      background: white;
+      box-shadow: 0 4px 10px rgba(74, 44, 42, 0.18);
       transition: 0.35s ease;
       z-index: 3;
     }
 
-    .theme-toggle::before {
-      content: "";
-      position: absolute;
-      inset: 7px 9px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.32);
-      opacity: 0.8;
-      transition: 0.35s ease;
+    .sun,
+    .moon {
+      display: none;
     }
 
     body.dark-mode .theme-toggle {
@@ -157,10 +117,6 @@
     body.dark-mode .toggle-circle {
       left: 35px;
       background: #ffd8e0;
-    }
-
-    body.dark-mode .theme-toggle::before {
-      background: rgba(255, 216, 224, 0.12);
     }
 
     .visit-card {
@@ -273,33 +229,12 @@
       border: 1px solid rgba(183, 110, 121, 0.12);
       transition: 0.35s;
       position: relative;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
       height: 100%;
     }
-
-    .info-box::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -120%;
-      width: 90%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
-      transition: 0.6s;
-    }
-
-    body.dark-mode .info-box::before {
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
-    }
-
-    .info-box:hover::before {
-      left: 120%;
-    }
-
-    .info-box:hover {
+.info-box:hover {
       transform: translateY(-10px);
       box-shadow: 0 22px 40px rgba(183, 110, 121, 0.25);
     }
@@ -411,11 +346,7 @@
       .info-box p {
         min-height: auto;
       }
-
-      .floating-decor span {
-        font-size: 26px;
-      }
-    }
+}
 
     @media (prefers-reduced-motion: reduce) {
       * {
@@ -427,18 +358,8 @@
 </head>
 
 <body>
-
-  <div class="floating-decor">
-    <span>🍰</span>
-    <span>🌸</span>
-    <span>✨</span>
-    <span>🧁</span>
-  </div>
-
-  <div class="visit-card">
+<div class="visit-card">
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode">
-      
-      
       <span class="toggle-circle"></span>
     </button>
 
