@@ -137,24 +137,9 @@
       position: relative;
       text-decoration: none;
       display: inline-block;
+      margin-left: 90px;
     }
-
-    .logo::after {
-      content: "✦";
-      position: absolute;
-      right: -22px;
-      top: -8px;
-      font-size: 18px;
-      color: #d9a441;
-      animation: sparkle 1.5s infinite alternate;
-    }
-
-    @keyframes sparkle {
-      from {
-        transform: scale(0.8) rotate(0deg);
-        opacity: 0.55;
-      }
-      to {
+to {
         transform: scale(1.25) rotate(18deg);
         opacity: 1;
       }
@@ -785,6 +770,10 @@
       nav {
         flex-direction: column;
         gap: 15px;
+      }
+
+      .logo {
+        margin-left: 0;
       }
 
       .nav-links {
