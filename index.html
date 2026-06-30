@@ -203,8 +203,7 @@ to {
       border-radius: 999px;
       cursor: pointer;
       position: relative;
-      top: 6px;
-      right: -10px;
+      top: 7px;
       padding: 4px;
       background: linear-gradient(135deg, #ffd6de, #fff1c7);
       box-shadow: 0 10px 22px rgba(183, 110, 121, 0.22);
@@ -273,8 +272,10 @@ to {
 
     .hero {
       flex: 1;
-      display: flex;
+      display: grid;
+      grid-template-columns: minmax(0, 650px) minmax(280px, 420px);
       align-items: center;
+      gap: 55px;
       padding: 8%;
       position: relative;
       z-index: 2;
@@ -286,6 +287,42 @@ to {
       animation: fadeUp 1.1s ease forwards;
       transition: 0.4s ease;
     }
+
+    .hero-image-box {
+      width: 100%;
+      min-height: 430px;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      background: var(--white-glass);
+      backdrop-filter: blur(10px);
+      animation: fadeUp 1.1s ease forwards;
+      transition: 0.4s ease;
+    }
+
+    .hero-image-box img {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+      display: block;
+      transition: 0.45s ease;
+    }
+
+    .hero-image-box:hover {
+      transform: translateY(-8px) rotate(1deg);
+      box-shadow: 0 26px 55px rgba(183, 110, 121, 0.32);
+    }
+
+    .hero-image-box:hover img {
+      transform: scale(1.06);
+    }
+
+    body.dark-mode .hero-image-box {
+      border: 1px solid rgba(232, 163, 175, 0.18);
+    }
+
 
     @keyframes fadeUp {
       from {
@@ -753,6 +790,22 @@ to {
         font-size: 46px;
       }
 
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-image-box {
+        min-height: 330px;
+        max-width: 520px;
+      }
+
+      .hero-image-box img {
+        min-height: 330px;
+      }
+
+
+
       .about {
         grid-template-columns: 1fr;
       }
@@ -795,6 +848,7 @@ to {
       .theme-toggle {
         width: 58px;
         height: 32px;
+        top: 0;
       }
 
       body.dark-mode .toggle-circle {
@@ -804,6 +858,16 @@ to {
       .hero-content {
         padding: 32px;
       }
+
+      .hero-image-box {
+        min-height: 270px;
+        border-radius: 28px;
+      }
+
+      .hero-image-box img {
+        min-height: 270px;
+      }
+
 
       .hero h1 {
         font-size: 38px;
@@ -868,6 +932,10 @@ to {
           floral desserts, cozy corners, and picture-perfect treats.
         </p>
         <a href="#cakes" class="btn">Explore Our Cakes</a>
+      </div>
+
+      <div class="hero-image-box">
+        <img src="images/hero-cake.jpg" alt="Decorated Oasis Bakery cake">
       </div>
     </div>
   </header>
