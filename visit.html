@@ -63,7 +63,45 @@
         radial-gradient(circle at 50% 100%, rgba(232, 163, 175, 0.12), transparent 35%),
         linear-gradient(135deg, var(--cream), var(--pink));
     }
-50% {
+
+    .floating-decor span {
+      position: fixed;
+      font-size: 34px;
+      opacity: 0.7;
+      animation: float 6s ease-in-out infinite;
+      pointer-events: none;
+      filter: drop-shadow(0 8px 14px rgba(183, 110, 121, 0.25));
+    }
+
+    .floating-decor span:nth-child(1) {
+      top: 12%;
+      left: 8%;
+      animation-delay: 0s;
+    }
+
+    .floating-decor span:nth-child(2) {
+      top: 18%;
+      right: 10%;
+      animation-delay: 1.2s;
+    }
+
+    .floating-decor span:nth-child(3) {
+      bottom: 15%;
+      left: 12%;
+      animation-delay: 2.2s;
+    }
+
+    .floating-decor span:nth-child(4) {
+      bottom: 10%;
+      right: 12%;
+      animation-delay: 3.1s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
         transform: translateY(-24px) rotate(8deg);
       }
     }
@@ -103,26 +141,6 @@
       z-index: 3;
     }
 
-    .sun,
-    .moon {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 15px;
-      z-index: 2;
-      transition: 0.35s ease;
-    }
-
-    .sun {
-      left: 9px;
-      opacity: 1;
-    }
-
-    .moon {
-      right: 9px;
-      opacity: 0.5;
-    }
-
     body.dark-mode .theme-toggle {
       background: linear-gradient(135deg, #33212a, #0f0b0d);
     }
@@ -130,14 +148,6 @@
     body.dark-mode .toggle-circle {
       left: 35px;
       background: #ffd8e0;
-    }
-
-    body.dark-mode .sun {
-      opacity: 0.45;
-    }
-
-    body.dark-mode .moon {
-      opacity: 1;
     }
 
     .visit-card {
@@ -374,7 +384,7 @@
       }
 
       body.dark-mode .toggle-circle {
-        left: 31px;
+        left: 29px;
       }
 
       h1 {
@@ -388,7 +398,11 @@
       .info-box p {
         min-height: auto;
       }
-}
+
+      .floating-decor span {
+        font-size: 26px;
+      }
+    }
 
     @media (prefers-reduced-motion: reduce) {
       * {
@@ -401,10 +415,16 @@
 </head>
 
 <body>
-<div class="visit-card">
+
+  <div class="floating-decor">
+    <span>🍰</span>
+    <span>🌸</span>
+    <span>✨</span>
+    <span>🧁</span>
+  </div>
+
+  <div class="visit-card">
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode">
-      <span class="sun"></span>
-      <span class="moon"></span>
       <span class="toggle-circle"></span>
     </button>
 
@@ -462,5 +482,4 @@
   </script>
 
 </body>
-</html>
- ​​
+</html> 
