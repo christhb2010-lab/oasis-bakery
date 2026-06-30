@@ -103,7 +103,7 @@
       top: 0;
       z-index: 10;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       padding: 22px 8%;
       background: rgba(255, 255, 255, 0.58);
@@ -134,10 +134,13 @@
       font-weight: bold;
       color: var(--rose);
       letter-spacing: 1px;
-      position: relative;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       text-decoration: none;
       display: inline-block;
-      margin-left: 330px;
+      margin-left: 0;
+      white-space: nowrap;
     }
 to {
         transform: scale(1.25) rotate(18deg);
@@ -775,6 +778,8 @@ to {
       }
 
       .logo {
+        position: static;
+        transform: none;
         margin-left: 0;
       }
 
