@@ -248,24 +248,7 @@
       transform: translateY(-10px);
       box-shadow: 0 22px 40px rgba(183, 110, 121, 0.25);
     }
-
-    .icon {
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 18px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--rose), #d08a96);
-      color: white;
-      font-size: 15px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      box-shadow: 0 12px 24px rgba(183, 110, 121, 0.25);
-    }
-
-    .info-box h2 {
+.info-box h2 {
       color: var(--deep-rose);
       margin-bottom: 12px;
       font-size: 28px;
@@ -344,7 +327,7 @@
       }
 
       body.dark-mode .toggle-circle {
-        left: 31px;
+        left: 29px;
       }
 
       h1 {
@@ -358,7 +341,7 @@
       .info-box p {
         min-height: auto;
       }
-    }
+}
 
     @media (prefers-reduced-motion: reduce) {
       * {
@@ -372,16 +355,13 @@
 
 <body>
 
-  <div class="visit-card">
+<div class="visit-card">
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode">
       <span class="toggle-circle"></span>
     </button>
 
-```
 <div class="content">
-```
-
-<a href="index.html" class="logo">Oasis Bakery</a>
+  <a href="index.html" class="logo">Oasis Bakery</a>
 
   <h1>Book a Visit</h1>
   <p class="subtitle">
@@ -390,28 +370,23 @@
 
   <div class="info-grid">
     <div class="info-box">
-      <div class="icon">LOC</div>
-      <h2>Our Location</h2>
+<h2>Our Location</h2>
       <p>Find Oasis Bakery and plan your visit using our location link.</p>
       <a href="https://share.google/FDOaytuTMlZZFrLJ1" target="_blank" class="btn">
         Open Location
       </a>
     </div>
 
-```
-<div class="info-box">
-  <div class="icon">TEL</div>
-  <h2>Call Us</h2>
-  <p>+971 6 740 6800</p>
-  <a href="tel:+97167406800" class="btn">
-    Call Now
-  </a>
-</div>
-```
-
+    <div class="info-box">
+<h2>Call Us</h2>
+      <p>+971 6 740 6800</p>
+      <a href="tel:+97167406800" class="btn">
+        Call Now
+      </a>
+    </div>
   </div>
 
-<a href="index.html" class="btn back-btn">← Back to Main Page</a>
+  <a href="index.html" class="btn back-btn">← Back to Main Page</a>
 
   <p class="mini-note">Fresh cakes, warm lights, and sweet memories are waiting.</p>
 </div>
@@ -436,4 +411,3 @@
 
 </body>
 </html>
-::: ​​
